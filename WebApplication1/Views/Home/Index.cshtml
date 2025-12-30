@@ -1,8 +1,423 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<section class="banner_main">
+    <div id="myCarousel" class="carousel slide banner" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="first-slide" src="~/images/banner1.jpg" alt="First slide">
+                <div class="container">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="second-slide" src="~/images/banner2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="third-slide" src="~/images/banner3.jpg" alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="booking_ocline">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="book_room">
+                        <h1 class="titiloestrela">HOTEL EXPRESS</h1>
+                        <span class="estrela">★★★★★</span>
+                        <h3 class="text-light">Quartos & Suites</h3>
+                        <div class="book_now">
+                            <div class="row">
+                                <div class="col-md-12 text-light">
+                                    <p><strong>Quartos:</strong> 311</p>
+                                    <p><strong>Suites:</strong> 7</p>
+                                    <p><strong>Suites Presidencial:</strong> 5</p>
+                                    <p><strong>Apartamentos:</strong> 42</p>
+                                </div>
+                                <div class="col-md-12">
+                                    <!-- Link convertido para Tag Helper -->
+                                    <a asp-controller="Reservas" asp-action="Create" class="book_btn link-reserva">
+                                        Reservar Agora
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="about">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="titlepage">
+                    <h2>Sobre nós</h2>
+                    <p>
+                        O <strong>HotelExpress</strong> nasceu com o propósito de oferecer conforto,
+                        praticidade e um atendimento de excelência para todos os no hóspedes.
+                        Localizado em uma região estratégica, o nosso hotel foi pensado para atender tanto viajantes a lazer quanto a negócios,
+                        garantindo uma estadia tranquila, segura e agradável.
+
+                        Contamos com quartos modernos e bem equipados, serviços de qualidade e
+                        uma equipe sempre pronta para receber você com cordialidade
+                        e profissionalismo. No HotelExpress, cada detalhe é cuidado para
+                        que você se sinta em casa desde o primeiro momento.
+                    </p>
+                    <!-- Link para página Sobre -->
+                    <a class="read_more" asp-controller="Home" asp-action="Sobre">
+                        Ler mais
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="about_img">
+                    <figure>
+                        <img src="~/images/about.png" alt="Sobre o HotelExpress" />
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<div class="our_room">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Quartos</h2>
+                    <p>
+                        Os quartos do HotelExpress foram cuidadosamente pensados
+                        para oferecer conforto, praticidade e bem-estar em cada estadia.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Quarto 1 -->
+            <div class="col-md-4 col-sm-6">
+                <div id="serv_hover" class="room">
+                    <div class="room_img">
+                        <figure><img src="~/images/room1.jpg" alt="Quarto Duplo" /></figure>
+                    </div>
+                    <div class="bed_room">
+                        <h3>Quarto Duplo</h3>
+                        <p>
+                            Espaçoso e aconchegante, perfeito para casais ou duas pessoas.
+                            Oferece conforto, privacidade e um ambiente moderno.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quarto 2 -->
+            <div class="col-md-4 col-sm-6">
+                <div id="serv_hover" class="room">
+                    <div class="room_img">
+                        <figure><img src="~/images/room2.jpg" alt="Quarto Executivo" /></figure>
+                    </div>
+                    <div class="bed_room">
+                        <h3>Quarto Executivo</h3>
+                        <p>
+                            Pensado para viagens de negócios, combina conforto e praticidade,
+                            com ambiente tranquilo e espaço para trabalho.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quarto 3 -->
+            <div class="col-md-4 col-sm-6">
+                <div id="serv_hover" class="room">
+                    <div class="room_img">
+                        <figure><img src="~/images/room3.jpg" alt="Quarto Twin" /></figure>
+                    </div>
+                    <div class="bed_room">
+                        <h3>Quarto Twin</h3>
+                        <p>
+                            Ideal para amigos ou colegas de trabalho, com duas
+                            camas individuais e todas as comodidades
+                            essenciais para uma boa estadia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quarto 4 -->
+            <div class="col-md-4 col-sm-6">
+                <div id="serv_hover" class="room">
+                    <div class="room_img">
+                        <figure><img src="~/images/room4.jpg" alt="Suíte Luxo" /></figure>
+                    </div>
+                    <div class="bed_room">
+                        <h3>Suíte Luxo</h3>
+                        <p>
+                            Nossa opção mais completa, com design moderno, conforto
+                            superior e detalhes pensados para uma experiência inesquecível.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quarto 5 -->
+            <div class="col-md-4 col-sm-6">
+                <div id="serv_hover" class="room">
+                    <div class="room_img">
+                        <figure><img src="~/images/room5.jpg" alt="Suíte Luxo" /></figure>
+                    </div>
+                    <div class="bed_room">
+                        <h3>Suíte Luxo</h3>
+                        <p>
+                            Nossa opção mais completa, com design moderno, conforto superior e
+                            detalhes pensados para uma experiência inesquecível.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quarto 6 -->
+            <div class="col-md-4 col-sm-6">
+                <div id="serv_hover" class="room">
+                    <div class="room_img">
+                        <figure><img src="~/images/room6.jpg" alt="Suíte" /></figure>
+                    </div>
+                    <div class="bed_room">
+                        <h3>Suíte</h3>
+                        <p>
+                            Elegante e sofisticada, oferece mais espaço, conforto premium e
+                            uma experiência exclusiva durante a sua estadia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botão para ver todos os quartos (adicionei para melhor navegação) -->
+        <div class="row mt-5">
+            <div class="col-md-12 text-center">
+                <a asp-controller="Quartos" asp-action="Index" class="btn btn-primary btn-lg">
+                    Ver Todos os Quartos
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Galeria</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Imagem 1 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="gallery_img">
+                    <figure><img src="~/images/gallery1.jpg" alt="Galeria 1" /></figure>
+                </div>
+            </div>
+
+            <!-- Imagem 2 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="gallery_img">
+                    <figure><img src="~/images/gallery2.jpg" alt="Galeria 2" /></figure>
+                </div>
+            </div>
+
+            <!-- Imagem 3 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="gallery_img">
+                    <figure><img src="~/images/gallery3.jpg" alt="Galeria 3" /></figure>
+                </div>
+            </div>
+
+            <!-- Imagem 4 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="gallery_img">
+                    <figure><img src="~/images/gallery4.jpg" alt="Galeria 4" /></figure>
+                </div>
+            </div>
+
+            <!-- Imagem 5 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="gallery_img">
+                    <figure><img src="~/images/gallery5.jpg" alt="Galeria 5" /></figure>
+                </div>
+            </div>
+
+            <!-- Imagem 6 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="gallery_img">
+                    <figure><img src="~/images/gallery6.jpg" alt="Galeria 6" /></figure>
+                </div>
+            </div>
+
+            <!-- Imagem 7 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="gallery_img">
+                    <figure><img src="~/images/gallery7.jpg" alt="Galeria 7" /></figure>
+                </div>
+            </div>
+
+            <!-- Imagem 8 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="gallery_img">
+                    <figure><img src="~/images/gallery8.jpg" alt="Galeria 8" /></figure>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botão para galeria completa (opcional) -->
+        <div class="row mt-4">
+            <div class="col-md-12 text-center">
+                <a asp-controller="Galeria" asp-action="Index" class="btn btn-outline-primary">
+                    Ver Galeria Completa
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Blog</h2>
+                    <p>Fique por dentro das novidades e dicas do HotelExpress</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Post 1 -->
+            <div class="col-md-4">
+                <div class="blog_box">
+                    <div class="blog_img">
+                        <figure><img src="~/images/blog1.jpg" alt="Dicas para sua estadia" /></figure>
+                    </div>
+                    <div class="blog_room">
+                        <h3>Dicas para sua Estadia</h3>
+                        <span>Como aproveitar ao máximo sua hospedagem</span>
+                        <p>
+                            Confira nossas recomendações para tornar sua experiência no HotelExpress
+                            ainda mais especial e memorável. Descubra os melhores momentos para
+                            aproveitar nossos serviços.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 2 -->
+            <div class="col-md-4">
+                <div class="blog_box">
+                    <div class="blog_img">
+                        <figure><img src="~/images/blog2.jpg" alt="Eventos no hotel" /></figure>
+                    </div>
+                    <div class="blog_room">
+                        <h3>Eventos Especiais</h3>
+                        <span>Confira nossa programação mensal</span>
+                        <p>
+                            O HotelExpress sempre prepara eventos exclusivos para nossos hóspedes.
+                            Desde happy hours até workshops, temos atividades para todos os gostos
+                            durante sua estadia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 3 -->
+            <div class="col-md-4">
+                <div class="blog_box">
+                    <div class="blog_img">
+                        <figure><img src="~/images/blog3.jpg" alt="Pacotes promocionais" /></figure>
+                    </div>
+                    <div class="blog_room">
+                        <h3>Ofertas Exclusivas</h3>
+                        <span>Pacotes promocionais e descontos</span>
+                        <p>
+                            Aproveite nossos pacotes especiais com descontos em estadias prolongadas,
+                            tratamentos no spa ou experiências gastronômicas. Fique atento às
+                            promoções sazonais.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botão para blog completo (opcional) -->
+        <div class="row mt-4">
+            <div class="col-md-12 text-center">
+                <a href="#" class="btn btn-outline-secondary">
+                    Ver Mais Posts do Blog
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Contactos</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Formulário com Tag Helpers do ASP.NET -->
+                <form id="request" class="main_form" asp-controller="Contactos" asp-action="Enviar" method="post">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input class="contactus" placeholder="Nome" type="text" name="Nome" required />
+                        </div>
+                        <div class="col-md-12">
+                            <input class="contactus" placeholder="Email" type="email" name="Email" required />
+                        </div>
+                        <div class="col-md-12">
+                            <input class="contactus" placeholder="Número de telefone" type="tel" name="Telefone" />
+                        </div>
+                        <div class="col-md-12">
+                            <textarea class="textarea" placeholder="Mensagem" name="Mensagem" rows="5" required>Mensagem</textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="submit" class="send_btn">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="map_main">
+                    <div class="map-responsive">
+                        <!-- Mapa atualizado (removi chave API pública) -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.548266078643!2d-8.62885168461955!3d41.40362997926238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2465abc4e153c1%3A0x2c14a5e2c5b5b5b5!2sPorto%2C%20Portugal!5e0!3m2!1spt-PT!2spt!4v1620000000000!5m2!1spt-PT!2spt"
+                                width="600" height="400" style="border:0; width: 100%;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
